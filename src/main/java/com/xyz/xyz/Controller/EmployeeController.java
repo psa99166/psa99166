@@ -21,6 +21,7 @@ public class EmployeeController {
     private ModelMapper modelMapper;
     @PostMapping("/add") // Use @PostMapping for clarity when adding data
     public ResponseEntity<EmployeeDto> addEmployee(@RequestBody EmployeeDto dto) {
+        System.out.println("vdkjvn");
 
         EmployeeDto employeeDto = employeeService.addEmployee(dto); // Call service layer
         return new ResponseEntity<>(employeeDto, HttpStatus.CREATED); // Return response
